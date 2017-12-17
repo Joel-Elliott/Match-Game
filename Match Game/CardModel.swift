@@ -11,15 +11,27 @@ import Foundation
 class CardModel {
     
     
-    func getCards() {
+    func getCards() -> [Card] {
         
-        //TODO: Declare an array to store generated cards
+        //Declare an array to store generated cards
+        var generatedCardsArray = [Card()]
         
         //Randomly generate pairs of cards
-        
-        //randomize array
+        for _ in 1...8 {
+            let randomNumber = arc4random_uniform(13) + 1
+            //Create the first card object
+            let cardOne = Card()
+            cardOne.imageName = "card\(randomNumber)"
+            generatedCardsArray.append(cardOne)
+            //Create the second card object
+            let cardTwo = Card()
+            cardTwo.imageName = "card\(randomNumber)"
+            generatedCardsArray.append(cardTwo)
+        }
+        //TODO: randomize array
         
         //return array
+        return generatedCardsArray
     }
     
     
