@@ -14,7 +14,7 @@ class CardModel {
     func getCards() -> [Card] {
         
         //Declare an array to store generated cards
-        var generatedCardsArray = [Card()]
+        var generatedCardsArray = [Card]()
         
         //Randomly generate pairs of cards
         for _ in 1...8 {
